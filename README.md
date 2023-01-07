@@ -8,3 +8,5 @@ It's provided in LV2, VST, VST3 and CLAP formats, for Linux environments. The Pd
    * Miller Puckette and Pure Data
    * hvcc
    * DPF - DISTRHO Plugin Framework
+
+No effort has been made to integrate a fancy GUI for the plugin.
