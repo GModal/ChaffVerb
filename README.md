@@ -1,5 +1,5 @@
 # ChaffVerb
-An audio plugin utilizing pitch shifting, echo and reverb, for creating sounds from shimmers to whale songs. 
+An audio plugin utilizing pitch shifting, echo and reverb, and can create sounds that vary from shimmers to whale songs. 
 
 ChaffVerb is based on a Pure Data patch, and built with the Heavy (hvcc) Pd compiler. It leans heavily on Miller Puckette's G09.pitchshift.pd patch (converted to abstraction) and the std Rev2~.pd reverb patch, with a few modifications.
 
