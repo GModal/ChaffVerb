@@ -10,3 +10,5 @@ It's provided in LV2, VST, VST3 and CLAP formats, for Linux environments. The Pd
    * DPF - DISTRHO Plugin Framework
 
 No effort has been made to integrate a fancy GUI for the plugin.
+
+ChaffVerb was written by Doug Garmon, and released under the MIT licence.
