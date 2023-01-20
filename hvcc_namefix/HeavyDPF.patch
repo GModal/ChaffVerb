@@ -1,0 +1,66 @@
+6c6
+< 
+---
+> #include <string>		// namefix chg
+43a44,78
+> // namefix chg start
+> class namefix { 
+> 	public:  
+>     std::string name;
+>     namefix() {
+>     	name = "";
+>     }
+> 
+> void set(std::string const& from) {
+> 	name.assign(from);
+> }
+> 
+> std::string getName() {
+> 	return (name);
+> }
+> 
+> const char * getCName() {
+> 	return (name.c_str());
+> }
+> 	
+> void replace(std::string const& from, std::string const& to ) {	
+> 	if(!from.empty())
+> 		for(size_t pos = 0; (pos = name.find(from, pos)) != std::string::npos; pos += to.size())
+>             name.replace(pos, from.size(), to);
+> }
+> 
+> const char * replaceAll(const char * nm) {
+> 	this->name = nm;
+>     this->replace("__1", ":");
+>     this->replace("__2", "-");
+>     this->replace("__3", "(");
+>     this->replace("__4", ")");
+>     this->replace("_", " ");
+> 	return (name.c_str());
+> }
+44a80,93
+> const char * removeAll(const char * nm) {
+> 	this->name = nm;
+>     this->replace("__1", "");
+>     this->replace("__2", "");
+>     this->replace("__3", "");
+>     this->replace("__4", "");
+> 	return (name.c_str());
+> }
+> 
+> void removechar(char ch) {
+> 	name.erase(std::remove(name.begin(), name.end(), ch), name.end());
+> }
+> };
+> // namefix chg end
+101a151
+>  namefix newName;		// namefix chg
+108,109c158,162
+<         parameter.name = "{{v.display.replace('_', ' ')}}";
+<         parameter.symbol = "{{v.display|lower}}";
+---
+> 	// namefix chg start
+>         parameter.name = newName.replaceAll("{{v.display}}");
+>         parameter.symbol = newName.removeAll("{{v.display}}");
+>         parameter.symbol = parameter.symbol.toLower();
+> 	// namefix chg end    
