@@ -158,7 +158,7 @@ $ pip3 install hvcc
 Clone the ChaffVerb source (and the DISTHRO Plugin Framework):
 
 ```
-git clone -recursive https:
+git clone -recursive https://github.com/GModal/ChaffVerb
 ```
 
 Open a terminal (or cd to) the ChaffVerb directory, then enter:
