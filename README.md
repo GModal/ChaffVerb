@@ -153,6 +153,8 @@ ChaffVerb was written by Doug Garmon, and released under the MIT licence.
 
 The Releases section has a zip file with pre-built Linux plugin binaries. There's currently no installer, so just move the associated plugins to your home **.lv2**, **.vst**, and **.clap** directories. And the .vst3 directory as well, although I've not tested the VST3 version.
 
+The build version (Makefile) includes a simple installation script, for local (user home) use.
+
 ### Building ChaffVerb
 
 Install the **heavy** compiler: (See the section on the 'namefix' version below FIRST, if that's desired.)
@@ -165,7 +167,7 @@ Clone the ChaffVerb source (and the DISTHRO Plugin Framework):
 git clone --recursive https://github.com/GModal/ChaffVerb
 ```
 
-Open a terminal (or cd to) the ChaffVerb directory, then enter:
+Open a terminal (or cd) to the ChaffVerb directory, then enter:
 
 `make`
 
@@ -177,10 +179,10 @@ The plugin folders for each type must be present for install to work. These are 
 
 ### The hvcc 'namefix' version (the release builds)
 
-The release versions of ChaffVerb were built with a somewhat 'hacked' version of hvcc that allows inserting non-alphanumberic characters via codes in the Pd patch (characters which PureData itself wouldn't allow in send/receive arguments...well, some, at least. A dash character should be allowed, but it's not), and converts them for use in the hvcc-generated plugin interfaces.
+The release versions of ChaffVerb were built with a somewhat 'hacked' version of hvcc that allows inserting non-alphanumberic characters via codes in the Pd patch (characters which PureData itself wouldn't allow in send/receive arguments...well, some, at least. A dash character *should* be allowed in hvcc, but seems it's not), and converts them for use in the hvcc-generated plugin interfaces.
 
 This includes characters such as colon, dash, parenthesis, etc. Only four codes are currently supported, but it's simple to add more.
 
-The source does NOT default to the 'namefix' version, however. It's a more complicated build process.
+The source does NOT default to the 'namefix' version, however. Patching hvcc creates a more complicated build process.
 
 [Read the 'namefix' build instructions](hvcc_namefix.md)

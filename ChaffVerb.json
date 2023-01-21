@@ -5,7 +5,7 @@
         "description": "Chaff Verb",
         "maker": "GModal-GMoon",
         "homepage": "https://github.com/GModal",
-        "plugin_uri": "lv2://github.com/GModal/AUCOP",
+        "plugin_uri": "lv2://github.com/GModal/ChaffVerb",
         "version": "0, 1, 0",
         "license": "MIT",
         "midi_input": 0,
