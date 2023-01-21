@@ -149,6 +149,10 @@ No effort has been made to integrate a fancy GUI for the plugin.
 
 ChaffVerb was written by Doug Garmon, and released under the MIT licence.
 
+### Installing the prebuilds
+
+The Releases section has a zip file with pre-built Linux plugin binaries. There's currently no installer, so just move the associated plugins to your home **.lv2**, **.vst**, and **.clap** directories. And the .vst3 directory as well, although I've not tested the VST3 version.
+
 ### Building ChaffVerb
 
 Install the **heavy** compiler: (See the section on the 'namefix' version below FIRST, if that's desired.)
