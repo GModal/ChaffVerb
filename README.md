@@ -132,7 +132,7 @@ When a parameter placement seems counter-intuitive (**FX Level** is NOT in the M
 
   * Offsets, scalers and LFOs can interact in interesting ways. Pitch can ramp up or down in a direction that's contrary to expectations. Experimentation is good...
   * NA (Not Applicable) entries still display values. In it's current form, hvcc can't 'ghost out' unused controls. The 'NA' refers to an associated 'switch' parameter.
-  * **Shift Transpose** and **Shift Microtone** (Section D) are really just another pair of offsets & multipliers, and like earlier offsets (and scaling), similarly effect the pitch shift.
+  * **Shift Transpose** and **Shift Microtone** (Section D) are really just another pair of offsets, and like earlier offsets (and scaling), similarly effect the pitch shift.
 
 ### About ChaffVerb
 
@@ -179,10 +179,8 @@ The plugin folders for each type must be present for install to work. These are 
 
 ### The hvcc 'namefix' version (the release builds)
 
-The release versions of ChaffVerb were built with a somewhat 'hacked' version of hvcc that allows inserting non-alphanumberic characters via codes in the Pd patch (characters which PureData itself wouldn't allow in send/receive arguments...well, some, at least. A dash character *should* be allowed in hvcc, but seems it's not), and converts them for use in the hvcc-generated plugin interfaces.
+The release versions of ChaffVerb were built with a somewhat 'hacked' version of hvcc that allows inserting non-alphanumberic characters via codes in the Pd patch, and converts them for use in the hvcc-generated plugin interfaces.
 
-This includes characters such as colon, dash, parenthesis, etc. Only four codes are currently supported, but it's simple to add more.
-
-The source does NOT default to the 'namefix' version, however. Patching hvcc creates a more complicated build process.
+The source does NOT default to the 'namefix' version, however. Patching hvcc leads to a more complicated build process.
 
 [Read the 'namefix' build instructions](hvcc_namefix.md)
